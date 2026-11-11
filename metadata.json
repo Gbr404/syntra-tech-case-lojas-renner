@@ -1,0 +1,6 @@
+{
+  "name": "SYNTRA TECH | Case Lojas Renner - Hiperpersonalização com IA",
+  "description": "Demonstrador interativo mobile de hiperpersonalização em escala para o Case Lojas Renner desenvolvido pela Syntra Tech e Instituto Percorre.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
