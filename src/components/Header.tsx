@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Linkedin, Sparkles, Edit3, Check, Users, ExternalLink, Award } from 'lucide-react';
-import { TeamMember } from '../types';
+import { Linkedin, Sparkles, Edit3, Check, Users, ExternalLink, Building2 } from 'lucide-react';import { TeamMember } from '../types';
 import syntraLogo from '../../assets/Syntra White.png';
 
 interface HeaderProps {
@@ -37,10 +36,10 @@ export const Header: React.FC<HeaderProps> = ({ team, onUpdateTeam, onOpenPitchG
         <button
           onClick={onOpenPitchGuide}
           className="flex items-center space-x-1.5 bg-[#E78224] hover:bg-[#d67215] text-white px-2.5 py-1 rounded-md text-[11px] font-semibold transition-colors cursor-pointer shadow-sm"
-          title="Ver guia de apresentação do pitch"
+          title="Conheça a Syntra Tech"
         >
-          <Award className="w-3.5 h-3.5" />
-          <span>Pitch & Respostas</span>
+          <Building2 className="w-3.5 h-3.5" />
+           <span>Conheça a Syntra Tech</span>
         </button>
       </div>
 
@@ -171,7 +170,7 @@ export const Header: React.FC<HeaderProps> = ({ team, onUpdateTeam, onOpenPitchG
             </div>
           ) : (
             /* Team cards list */
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
               {team.map((member) => (
                 <div
                   key={member.id}

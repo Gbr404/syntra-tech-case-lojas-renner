@@ -3,31 +3,38 @@ import { Product, SegmentData, SegmentProfile, TeamMember } from '../types';
 export const teamMembers: TeamMember[] = [
   {
     id: 'm1',
-    name: 'Ana Silva',
+    name: 'Gabriel Sá Bortelli',
     role: 'Tech Lead & IA Strategy',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
     linkedinUrl: 'https://www.linkedin.com',
   },
   {
     id: 'm2',
-    name: 'Lucas Rocha',
+    name: 'Miriã Fernanda',
     role: 'Product & Data Analyst',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
     linkedinUrl: 'https://www.linkedin.com',
   },
   {
     id: 'm3',
-    name: 'Beatriz Ramos',
+    name: 'Gabriel Mariano',
     role: 'Fashion & Marketing Specialist',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+    avatar: 'https://www.linkedin.com/in/gabrielmarianodourado/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BQpXWaNyDSLuPKPVeixTY%2Bg%3D%3D',
     linkedinUrl: 'https://www.linkedin.com',
   },
   {
     id: 'm4',
-    name: 'Gabriel Souza',
+    name: 'Julia Neves',
     role: 'Full Stack Engineer',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
     linkedinUrl: 'https://www.linkedin.com',
+  },
+  {
+  id: 'm5',
+  name: 'Isaac Cunha',
+  role: 'Full Stack Engineer',
+  avatar: 'Uhttps://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+  linkedinUrl: 'https://www.linkedin.com',
   },
 ];
 
