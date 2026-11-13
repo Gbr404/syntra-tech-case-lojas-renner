@@ -58,7 +58,7 @@ export const Header: React.FC<HeaderProps> = ({ team, onUpdateTeam, onOpenPitchG
 
             <div>
               <div className="flex items-center space-x-2">
-                <h1 className="font-extrabold text-2xl tracking-tight text-[#0A1C36] font-['Syne',sans-serif]">
+                <h1 className="font-extrabold text-2xl tracking-tight text-[#0A1C36] font-['Space_Grotesk',sans-serif]">
                   SYNTRA<span className="text-[#E78224]">.TECH</span>
                 </h1>
               
@@ -92,8 +92,8 @@ export const Header: React.FC<HeaderProps> = ({ team, onUpdateTeam, onOpenPitchG
                 O Problema que Estamos Resolvendo na Renner
               </h2>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                A Renner tem milhões de dados de compra parados, mas envia o mesmo e-mail genérico para a jovem de 18 anos e para a executiva de 45. A Syntra Tech desenvolveu uma camada de IA que clusteriza clientes em microssegmentos em tempo real e gera vitrines, e-mails e posts sob medida instantaneamente.
-              </p>
+                A Renner possui milhões de dados de compra, mas ainda envia comunicações genéricas. A Syntra Tech desenvolveu uma IA que segmenta clientes em tempo real e cria vitrines, e-mails e posts personalizados instantaneamente.
+              </p>         
             </div>
           </div>
         </div>
@@ -107,22 +107,7 @@ export const Header: React.FC<HeaderProps> = ({ team, onUpdateTeam, onOpenPitchG
                 Equipe Syntra Tech (Participantes)
               </h3>
             </div>
-            <button
-              onClick={() => setIsEditingTeam(!isEditingTeam)}
-              className="text-[11px] font-medium text-[#E78224] hover:text-[#C46108] flex items-center space-x-1 cursor-pointer transition-colors"
-            >
-              {isEditingTeam ? (
-                <>
-                  <Check className="w-3 h-3" />
-                  <span>Cancelar</span>
-                </>
-              ) : (
-                <>
-                  <Edit3 className="w-3 h-3" />
-                  <span>Editar Nomes & Links</span>
-                </>
-              )}
-            </button>
+           
           </div>
 
           {/* Member Edit Mode */}

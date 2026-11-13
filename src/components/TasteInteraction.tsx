@@ -100,8 +100,8 @@ export const TasteInteraction: React.FC<TasteInteractionProps> = ({
                   Selecionados
                 </span>
                 <span className="text-sm font-black text-emerald-800">
-                  {selectedCount} / 3 min
-                </span>
+                {selectedCount} / 4 <span className="text-[10px] font-bold">(mín. 3)</span>
+                 </span>
               </div>
 
               {selectedCount > 0 && (

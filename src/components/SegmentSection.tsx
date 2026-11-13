@@ -131,7 +131,7 @@ export const SegmentSection: React.FC<SegmentSectionProps> = ({
             <div className="flex items-center space-x-2">
               <Layers className="w-4 h-4 text-purple-800" />
               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-800">
-                Perfis de Segmento (Toque para ver os 3 Retângulos Azuis)
+                Perfis de Segmento (Selecione um perfil para explorar as recomendações.)
               </h3>
             </div>
             {customProfile && (

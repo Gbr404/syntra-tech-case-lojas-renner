@@ -8,6 +8,8 @@ import { Product, SegmentProfile, TeamMember } from './types';
 import { generateCustomProfileFromSelections } from './utils/aiRecommender';
 import { Sparkles, Layers, ShoppingBag, ArrowUp, QrCode, CheckCircle2 } from 'lucide-react';
 
+  const MAX_SELECTED = 4;
+
 export default function App() {
   // Team state (allows presentation group to customize their names)
   const [team, setTeam] = useState<TeamMember[]>(() => {
@@ -47,16 +49,23 @@ export default function App() {
     setTimeout(() => setToastMessage(null), 3500);
   };
 
+
+
   const handleToggleProduct = (product: Product) => {
-    setSelectedProducts((prev) => {
-      const exists = prev.some((p) => p.id === product.id);
-      if (exists) {
-        return prev.filter((p) => p.id !== product.id);
-      } else {
-        return [...prev, product];
-      }
-    });
-  };
+  const exists = selectedProducts.some((p) => p.id === product.id);
+
+  if (exists) {
+    setSelectedProducts((prev) => prev.filter((p) => p.id !== product.id));
+    return;
+  }
+
+  if (selectedProducts.length >= MAX_SELECTED) {
+    showToast('Máximo de 4 peças. Remova uma para trocar.');
+    return;
+  }
+
+  setSelectedProducts((prev) => [...prev, product]);
+};
 
   const handleClearSelection = () => {
     setSelectedProducts([]);

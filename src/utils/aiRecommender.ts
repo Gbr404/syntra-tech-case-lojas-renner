@@ -1,6 +1,9 @@
 import { catalogProducts } from '../data/mockData';
 import { Product, SegmentProfile, StyleCategory } from '../types';
 
+const MIN_RECOMMENDED = 3;
+const MAX_RECOMMENDED = 4;
+
 export interface StyleScore {
   style: StyleCategory;
   count: number;
@@ -84,17 +87,15 @@ export function generateCustomProfileFromSelections(
 
   // Find 3 curated recommendations: pick user's liked items first, then add complementary catalog items
   const selectedIds = new Set(selectedProducts.map((p) => p.id));
-  const recommended: Product[] = [...selectedProducts.slice(0, 2)];
+  const recommended: Product[] = selectedProducts.slice(0, MAX_RECOMMENDED);
+
 
   // Fill up to 3 with items matching the primary or secondary style
+  if (recommended.length < MIN_RECOMMENDED) {
   const complements = catalogProducts.filter(
     (p) => !selectedIds.has(p.id) && (p.style === primary || p.style === secondary)
   );
-  if (complements.length > 0 && recommended.length < 3) {
-    recommended.push(complements[0]);
-  }
-  if (recommended.length < 3 && selectedProducts.length >= 3) {
-    recommended.push(selectedProducts[2]);
+  recommended.push(...complements.slice(0, MIN_RECOMMENDED - recommended.length));
   }
 
   // Dynamic AI Email copywriting

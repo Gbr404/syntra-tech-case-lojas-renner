@@ -60,7 +60,7 @@ export const PieChart: React.FC<PieChartProps> = ({
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
             Base Renner
           </span>
-          <span className="text-xl font-extrabold text-[#0A1C36] font-['Syne',sans-serif]">
+          <span className="text-xl font-extrabold text-[#0A1C36] font-['IBM_Plex_Mono',monospace] tabular-nums tracking-tight">
             3.2M
           </span>
           <span className="text-[9px] text-[#E78224] font-bold uppercase">

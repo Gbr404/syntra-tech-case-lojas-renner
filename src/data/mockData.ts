@@ -20,7 +20,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Gabriel Mariano',
     role: 'Fashion & Marketing Specialist',
     avatar: 'https://www.linkedin.com/in/gabrielmarianodourado/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BQpXWaNyDSLuPKPVeixTY%2Bg%3D%3D',
-    linkedinUrl: 'https://www.linkedin.com',
+    linkedinUrl: 'https://www.linkedin.com/in/gabrielmarianodourado/',
   },
   {
     id: 'm4',
