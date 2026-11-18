@@ -112,20 +112,6 @@ Caso alguma funcionalidade de integração com serviços externos utilize uma ch
 
 **Importante:** o motor demonstrativo de recomendações descrito neste README funciona no frontend por meio de regras de negócio e não exige uma chave Gemini para esse processamento.
 
-## Publicação
-
-Por utilizar Vite e gerar uma aplicação frontend estática, o projeto pode ser publicado em serviços como:
-
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-- [Cloudflare Pages](https://pages.cloudflare.com/)
-- GitHub Pages
-
-O diretório de publicação para esses serviços é:
-
-```text
-dist/
-```
 
 ## Equipe
 
