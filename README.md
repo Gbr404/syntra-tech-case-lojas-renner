@@ -72,25 +72,13 @@ A implementação atual realiza esse processamento no frontend, utilizando dados
 - npm.
 - Git (opcional, para clonar o repositório).
 
-### 1. Clonar o repositório
-
-```bash
-git clone https://github.com/Gbr404/syntra-tech-_-case-lojas-renner.git
-```
-
-### 2. Acessar a pasta
-
-```bash
-cd syntra-tech-_-case-lojas-renner
-```
-
-### 3. Instalar as dependências
+### 1. Instalar as dependências
 
 ```bash
 npm install
 ```
 
-### 4. Iniciar o ambiente de desenvolvimento
+### 2. Iniciar o ambiente de desenvolvimento
 
 ```bash
 npm run dev
@@ -102,7 +90,7 @@ A aplicação estará disponível no endereço indicado pelo Vite, normalmente:
 http://localhost:3000
 ```
 
-### 5. Gerar a versão de produção
+### 3. Gerar a versão de produção
 
 ```bash
 npm run build
