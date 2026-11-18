@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({ team, onUpdateTeam, onOpenPitchG
   };
 
   return (
-    <header className="w-full bg-[#FAF7F2] border-b border-[#EADFCB] text-[#0A1C36] transition-all">
+    <header className="w-full bg-[#F4F7FB] border-b border-[#DCE4EF] text-[#0A1C36] transition-all">
       {/* Top Banner Accent: Instituto Percorre + Pitch Guide Button */}
       <div className="bg-[#0A1C36] text-white px-4 py-2 flex items-center justify-between text-xs font-medium">
         <div className="flex items-center space-x-2">
@@ -81,25 +81,9 @@ export const Header: React.FC<HeaderProps> = ({ team, onUpdateTeam, onOpenPitchG
           </div>
         </div>
 
-        {/* Pitch Problem Statement Card */}
-        <div className="mt-4 p-3.5 bg-white/80 backdrop-blur-sm rounded-xl border border-[#EADFCB] shadow-sm">
-          <div className="flex items-start gap-2.5">
-            <div className="p-1.5 bg-amber-500/10 text-[#E78224] rounded-lg mt-0.5">
-              <Sparkles className="w-4 h-4" />
-            </div>
-            <div>
-              <h2 className="text-xs font-bold uppercase tracking-wider text-slate-700">
-                O Problema que Estamos Resolvendo na Renner
-              </h2>
-              <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                A Renner possui milhões de dados de compra, mas ainda envia comunicações genéricas. A Syntra Tech desenvolveu uma IA que segmenta clientes em tempo real e cria vitrines, e-mails e posts personalizados instantaneamente.
-              </p>         
-            </div>
-          </div>
-        </div>
 
         {/* Team Members Section (Fotos dos Participantes + LinkedIn) */}
-        <div className="mt-4 pt-3 border-t border-[#E8DFC9]">
+        <div className="mt-4 pt-3 border-t border-[#DCE4EF]">
           <div className="flex items-center justify-between mb-2.5">
             <div className="flex items-center space-x-1.5">
               <Users className="w-3.5 h-3.5 text-slate-600" />
@@ -159,7 +143,7 @@ export const Header: React.FC<HeaderProps> = ({ team, onUpdateTeam, onOpenPitchG
               {team.map((member) => (
                 <div
                   key={member.id}
-                  className="bg-white/90 p-2.5 rounded-xl border border-[#E8DFC9] flex flex-col items-center text-center shadow-xs hover:shadow-sm transition-shadow"
+                  className="bg-white/90 p-2.5 rounded-xl border border-[#DCE4EF] flex flex-col items-center text-center shadow-xs hover:shadow-sm transition-shadow"
                 >
                   <div className="relative">
                     <img

@@ -107,7 +107,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-[#0A1C36] font-['Plus_Jakarta_Sans',sans-serif] selection:bg-[#E78224] selection:text-white pb-20">
+    <div className="min-h-screen bg-[#F4F7FB] text-[#0A1C36] font-['Plus_Jakarta_Sans',sans-serif] selection:bg-[#E78224] selection:text-white pb-20">
       {/* Toast Notification */}
       {toastMessage && (
         <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-[#0A1C36] text-white px-4 py-2.5 rounded-2xl shadow-xl border border-amber-400 flex items-center space-x-2 text-xs font-bold animate-fadeIn">

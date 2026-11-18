@@ -22,9 +22,9 @@ export const PieChart: React.FC<PieChartProps> = ({
   const circumference = 2 * Math.PI * radius;
 
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
       {/* SVG Donut */}
-      <div className="relative w-48 h-48 flex-shrink-0 flex items-center justify-center">
+      <div className="relative w-56 h-56 sm:w-64 sm:h-64 flex-shrink-0 flex items-center justify-center">
         <svg viewBox="0 0 200 200" className="w-full h-full -rotate-90 transform">
           {segments.map((segment) => {
             const fraction = segment.percentage / total;
@@ -60,7 +60,7 @@ export const PieChart: React.FC<PieChartProps> = ({
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
             Base Renner
           </span>
-          <span className="text-xl font-extrabold text-[#0A1C36] font-['IBM_Plex_Mono',monospace] tabular-nums tracking-tight">
+          <span className="text-2xl font-extrabold text-[#0A1C36] font-['IBM_Plex_Mono',monospace] tabular-nums tracking-tight">
             3.2M
           </span>
           <span className="text-[9px] text-[#E78224] font-bold uppercase">
@@ -69,42 +69,41 @@ export const PieChart: React.FC<PieChartProps> = ({
         </div>
       </div>
 
-      {/* Legend & Quick Select list */}
-      <div className="flex flex-col gap-2 w-full max-w-xs">
+      {/* Legenda: só nome + %, detalhes apenas no selecionado */}
+      <div className="flex flex-col gap-2 w-full max-w-sm">
         {segments.map((seg) => {
           const isSelected = selectedSegmentId === seg.id;
           return (
             <button
               key={seg.id}
               onClick={() => onSelectSegment(seg.id)}
-              className={`flex items-center justify-between p-2 rounded-xl text-left transition-all border cursor-pointer ${
+              className={`p-3 rounded-xl text-left transition-all border cursor-pointer ${
                 isSelected
                   ? 'bg-purple-900/10 border-purple-500 shadow-xs'
                   : 'bg-white hover:bg-slate-50 border-slate-200'
               }`}
             >
-              <div className="flex items-center space-x-2.5">
-                <span
-                  className="w-3.5 h-3.5 rounded-md flex-shrink-0"
-                  style={{ backgroundColor: seg.color }}
-                />
-                <div>
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center space-x-2.5">
+                  <span
+                    className="w-3.5 h-3.5 rounded-md flex-shrink-0"
+                    style={{ backgroundColor: seg.color }}
+                  />
                   <h4 className="text-xs font-bold text-slate-900 leading-snug">
                     {seg.name}
                   </h4>
-                  <span className="text-[10px] text-slate-500 font-medium">
-                    {seg.audienceShare}
-                  </span>
                 </div>
-              </div>
-              <div className="text-right">
-                <span className="font-extrabold text-xs text-[#0A1C36]">
+                <span className="font-extrabold text-sm text-[#0A1C36]">
                   {seg.percentage}%
                 </span>
-                <span className="block text-[9px] text-emerald-600 font-bold">
-                  {seg.estimatedGrowth}
-                </span>
               </div>
+
+              {isSelected && (
+                <div className="mt-1.5 pl-6 flex items-center justify-between text-[10px] font-medium">
+                  <span className="text-slate-500">{seg.audienceShare}</span>
+                  <span className="text-emerald-600 font-bold">{seg.estimatedGrowth}</span>
+                </div>
+              )}
             </button>
           );
         })}
