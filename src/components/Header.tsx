@@ -165,16 +165,7 @@ export const Header: React.FC<HeaderProps> = ({ team, onUpdateTeam, onOpenPitchG
                   <p className="text-[10px] text-slate-500 line-clamp-1 mb-2 font-medium">
                     {member.role}
                   </p>
-                  <a
-                    href={member.linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto w-full inline-flex items-center justify-center space-x-1 bg-[#0077B5]/10 hover:bg-[#0077B5]/20 text-[#0077B5] px-2 py-1 rounded-md text-[10px] font-bold transition-colors"
-                  >
-                    <Linkedin className="w-3 h-3" />
-                    <span>LinkedIn</span>
-                    <ExternalLink className="w-2.5 h-2.5 opacity-70" />
-                  </a>
+                  
                 </div>
               ))}
             </div>
