@@ -6,7 +6,7 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     base: process.env.GITHUB_ACTIONS === 'true'
-      ? '/syntra-tech-_-case-lojas-renner/'
+      ? '/syntra-tech-case-lojas-renner/'
       : '/',
 
     plugins: [react(), tailwindcss()],
