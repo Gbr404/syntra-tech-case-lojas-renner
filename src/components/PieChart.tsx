@@ -22,9 +22,9 @@ export const PieChart: React.FC<PieChartProps> = ({
   const circumference = 2 * Math.PI * radius;
 
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+    <div className="flex flex-col sm:flex-row items-center gap-6">
       {/* SVG Donut */}
-      <div className="relative w-56 h-56 sm:w-64 sm:h-64 flex-shrink-0 flex items-center justify-center">
+      <div className="relative w-44 h-44 sm:w-48 sm:h-48 flex-shrink-0 flex items-center justify-center">
         <svg viewBox="0 0 200 200" className="w-full h-full -rotate-90 transform">
           {segments.map((segment) => {
             const fraction = segment.percentage / total;
@@ -57,10 +57,10 @@ export const PieChart: React.FC<PieChartProps> = ({
 
         {/* Center label inside donut hole */}
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
-          <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
             Base Renner
           </span>
-          <span className="text-2xl font-extrabold text-[#0A1C36] font-['IBM_Plex_Mono',monospace] tabular-nums tracking-tight">
+          <span className="text-xl font-extrabold text-[#0A1C36] font-['IBM_Plex_Mono',monospace] tabular-nums tracking-tight">
             3.2M
           </span>
           <span className="text-[9px] text-[#E78224] font-bold uppercase">
@@ -70,26 +70,26 @@ export const PieChart: React.FC<PieChartProps> = ({
       </div>
 
       {/* Legenda: só nome + %, detalhes apenas no selecionado */}
-      <div className="flex flex-col gap-2 w-full max-w-sm">
+      <div className="flex flex-col gap-1.5 w-full flex-1 min-w-0">
         {segments.map((seg) => {
           const isSelected = selectedSegmentId === seg.id;
           return (
             <button
               key={seg.id}
               onClick={() => onSelectSegment(seg.id)}
-              className={`p-3 rounded-xl text-left transition-all border cursor-pointer ${
+              className={`px-3 py-2 rounded-xl text-left transition-all border cursor-pointer ${
                 isSelected
                   ? 'bg-purple-900/10 border-purple-500 shadow-xs'
                   : 'bg-white hover:bg-slate-50 border-slate-200'
               }`}
             >
               <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center space-x-2.5">
+                <div className="flex items-center space-x-2.5 min-w-0">
                   <span
                     className="w-3.5 h-3.5 rounded-md flex-shrink-0"
                     style={{ backgroundColor: seg.color }}
                   />
-                  <h4 className="text-xs font-bold text-slate-900 leading-snug">
+                  <h4 className="text-xs font-bold text-slate-900 leading-snug truncate">
                     {seg.name}
                   </h4>
                 </div>
@@ -99,7 +99,7 @@ export const PieChart: React.FC<PieChartProps> = ({
               </div>
 
               {isSelected && (
-                <div className="mt-1.5 pl-6 flex items-center justify-between text-[10px] font-medium">
+                <div className="mt-1 pl-6 flex items-center justify-between text-[10px] font-medium">
                   <span className="text-slate-500">{seg.audienceShare}</span>
                   <span className="text-emerald-600 font-bold">{seg.estimatedGrowth}</span>
                 </div>

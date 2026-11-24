@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Instagram, ShoppingBag, Sparkles, Copy, Check, ArrowRight, Tag, Heart } from 'lucide-react';
+import { Mail, Instagram, ShoppingBag, Copy, Check, ArrowRight } from 'lucide-react';
 import { Product, SegmentProfile } from '../types';
 import rennerLogo from '../../assets/Renner_Logo.png';
 
@@ -19,20 +19,17 @@ export const ThreeBlueBoxes: React.FC<ThreeBlueBoxesProps> = ({ profile }) => {
 
   return (
     <div className="space-y-4 pt-2 animate-fadeIn">
-      {/* Indicator Pill */}
-      <div className="flex items-center justify-between bg-blue-50/80 border border-blue-200 px-3.5 py-2 rounded-xl text-blue-900 text-xs">
+      {/* Faixa de contexto */}
+      <div className="flex items-center bg-blue-50/80 border border-blue-200 px-3.5 py-2 rounded-xl text-blue-900 text-xs">
         <div className="flex items-center space-x-2">
-          <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+          <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse flex-shrink-0"></span>
           <span className="font-bold">
-            Entregáveis Gerados por IA para: {profile.personaName} ({profile.personaAge} anos)
+            Recomendações Geradas por IA para: {profile.personaName} ({profile.personaAge} anos)
           </span>
         </div>
-        <span className="text-[10px] font-semibold bg-blue-600 text-white px-2 py-0.5 rounded-full uppercase tracking-wider">
-          3 Pilares
-        </span>
       </div>
 
-      {/* RETÂNGULO AZUL 1: Vitrine de Produtos Recomendados por IA */}
+      {/* RECOMENDAÇÃO 1: Vitrine de Produtos */}
       <div className="bg-gradient-to-br from-blue-900 to-indigo-950 text-white p-4 rounded-2xl border border-blue-400/30 shadow-md">
         <div className="flex items-center justify-between mb-3 border-b border-blue-500/20 pb-2">
           <div className="flex items-center space-x-2">
@@ -41,7 +38,7 @@ export const ThreeBlueBoxes: React.FC<ThreeBlueBoxesProps> = ({ profile }) => {
             </div>
             <div>
               <span className="text-[10px] font-bold tracking-wider text-blue-300 uppercase block">
-                1º Retângulo Azul • E-commerce Renner
+                Recomendação 1 de 3 • E-commerce Renner
               </span>
               <h4 className="text-sm font-extrabold text-white">
                 Vitrine de Produtos Recomendados por IA
@@ -54,34 +51,30 @@ export const ThreeBlueBoxes: React.FC<ThreeBlueBoxesProps> = ({ profile }) => {
         </div>
 
         <p className="text-xs text-blue-200/90 mb-3 leading-relaxed">
-          Algoritmo de recomendação baseado no histórico de navegação e taxa de afinidade de estilo da cliente.
+          Algoritmo de recomendação baseado no histórico de navegação e na afinidade de estilo do perfil.
         </p>
 
-        {/* Product Cards Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+        {/* Lista de produtos: cabe no painel estreito com 3 ou 4 peças */}
+        <div className="space-y-2">
           {profile.recommendedProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/10 rounded-xl p-2.5 transition-all flex flex-col justify-between"
+              className="flex items-center gap-3 bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/10 rounded-xl p-2 transition-all"
             >
-              <div className="relative mb-2 aspect-[4/3] rounded-lg overflow-hidden bg-slate-800">
+              <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-slate-800">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
-                <span className="absolute top-1 left-1 bg-black/70 backdrop-blur-xs text-[9px] font-bold text-amber-300 px-1.5 py-0.5 rounded">
+              </div>
+              <div className="min-w-0 flex-1">
+                <span className="block text-[9px] font-bold text-amber-300 uppercase truncate">
                   {product.tag}
                 </span>
-              </div>
-              <div>
-                <h5 className="text-xs font-bold text-white line-clamp-1 mb-0.5">
-                  {product.name}
-                </h5>
-                <p className="text-[10px] text-blue-200 line-clamp-1 mb-1.5">
-                  {product.description}
-                </p>
-                <div className="flex items-center justify-between pt-1 border-t border-white/10">
+                <h5 className="text-xs font-bold text-white line-clamp-1">{product.name}</h5>
+                <p className="text-[10px] text-blue-200 line-clamp-1 mb-1">{product.description}</p>
+                <div className="flex items-center justify-between">
                   <span className="text-xs font-black text-amber-300">
                     R$ {product.price.toFixed(2).replace('.', ',')}
                   </span>
@@ -95,7 +88,7 @@ export const ThreeBlueBoxes: React.FC<ThreeBlueBoxesProps> = ({ profile }) => {
         </div>
       </div>
 
-      {/* RETÂNGULO AZUL 2: E-mail Marketing Hiperpersonalizado */}
+      {/* RECOMENDAÇÃO 2: E-mail Marketing */}
       <div className="bg-gradient-to-br from-[#0F284E] to-[#1E3A8A] text-white p-4 rounded-2xl border border-blue-400/30 shadow-md">
         <div className="flex items-center justify-between mb-3 border-b border-blue-500/20 pb-2">
           <div className="flex items-center space-x-2">
@@ -104,7 +97,7 @@ export const ThreeBlueBoxes: React.FC<ThreeBlueBoxesProps> = ({ profile }) => {
             </div>
             <div>
               <span className="text-[10px] font-bold tracking-wider text-blue-300 uppercase block">
-                2º Retângulo Azul • CRM & E-mail Marketing
+                Recomendação 2 de 3 • CRM & E-mail Marketing
               </span>
               <h4 className="text-sm font-extrabold text-white">
                 Texto de E-mail Personalizado por IA
@@ -128,16 +121,16 @@ export const ThreeBlueBoxes: React.FC<ThreeBlueBoxesProps> = ({ profile }) => {
             ) : (
               <>
                 <Copy className="w-3 h-3" />
-                <span>Copiar Copy</span>
+                <span>Copiar texto</span>
               </>
             )}
           </button>
         </div>
 
-        {/* Email Mock UI */}
+        {/* Mock do e-mail */}
         <div className="bg-white text-slate-800 rounded-xl p-3.5 shadow-inner text-xs space-y-2">
           <div className="border-b border-slate-100 pb-2">
-            <div className="flex items-center justify-between text-[11px] text-slate-500 mb-1">
+            <div className="flex flex-wrap items-center justify-between gap-1 text-[11px] text-slate-500 mb-1">
               <span>
                 <strong>De:</strong> Lojas Renner &lt;novidades@lojasrenner.com.br&gt;
               </span>
@@ -166,7 +159,7 @@ export const ThreeBlueBoxes: React.FC<ThreeBlueBoxesProps> = ({ profile }) => {
         </div>
       </div>
 
-      {/* RETÂNGULO AZUL 3: Sugestão de Post e Legenda para Redes Sociais */}
+      {/* RECOMENDAÇÃO 3: Redes Sociais */}
       <div className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] text-white p-4 rounded-2xl border border-blue-400/30 shadow-md">
         <div className="flex items-center justify-between mb-3 border-b border-slate-700 pb-2">
           <div className="flex items-center space-x-2">
@@ -175,7 +168,7 @@ export const ThreeBlueBoxes: React.FC<ThreeBlueBoxesProps> = ({ profile }) => {
             </div>
             <div>
               <span className="text-[10px] font-bold tracking-wider text-pink-300 uppercase block">
-                3º Retângulo Azul • Social Media & Criativos
+                Recomendação 3 de 3 • Social Media & Criativos
               </span>
               <h4 className="text-sm font-extrabold text-white">
                 Sugestão de Legenda & Copy para Redes Sociais (IA)
@@ -205,18 +198,18 @@ export const ThreeBlueBoxes: React.FC<ThreeBlueBoxesProps> = ({ profile }) => {
           </button>
         </div>
 
-        {/* Social Card Mock */}
+        {/* Mock do post */}
         <div className="bg-slate-900/90 border border-slate-700/80 rounded-xl p-3.5 space-y-2.5">
           <div className="flex items-center space-x-2">
             <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-amber-400 via-rose-500 to-purple-600 p-[1.5px]">
-             <div className="w-full h-full bg-white rounded-full overflow-hidden flex items-center justify-center">
-              <img
-               src={rennerLogo}
-               alt="Logo Lojas Renner"
-               className="w-full h-full object-contain p-0.5"
-              />
+              <div className="w-full h-full bg-white rounded-full overflow-hidden flex items-center justify-center">
+                <img
+                  src={rennerLogo}
+                  alt="Logo Lojas Renner"
+                  className="w-full h-full object-contain p-0.5"
+                />
               </div>
-           </div>
+            </div>
             <div>
               <span className="font-bold text-xs text-white">lojasrenner</span>
               <span className="text-[10px] text-slate-400 ml-1.5">

@@ -50,7 +50,7 @@ export const TasteInteraction: React.FC<TasteInteractionProps> = ({
             <span className="w-3.5 h-3.5 rounded-full bg-emerald-600 ring-4 ring-emerald-200"></span>
             <div>
               <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 block">
-                Sessão Verde • Teste Prático da Bancada
+                Experimente a IA
               </span>
               <h2 className="text-base sm:text-lg font-bold text-[#0A1C36]">
                 Simulação de Navegação & Carrinho Renner
@@ -89,7 +89,7 @@ export const TasteInteraction: React.FC<TasteInteractionProps> = ({
                 type="text"
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
-                placeholder="Ex: Prof. Carlos, Beatriz, Jurado 01..."
+                placeholder="Ex: Beatriz, Andressa, João..."
                 className="w-full text-xs px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium"
               />
             </div>

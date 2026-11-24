@@ -1,4 +1,8 @@
 import { Product, SegmentData, SegmentProfile, TeamMember } from '../types';
+import linhoImg from '../../assets/produtos/linho.webp';
+import cutoutImg from '../../assets/produtos/cutout.jpg';
+import windbreakerImg from '../../assets/produtos/windbreaker.avif';
+import SaiaCargoImg from '../../assets/produtos/saiacargo.jpg';
 
 export const teamMembers: TeamMember[] = [
   {
@@ -30,11 +34,11 @@ export const teamMembers: TeamMember[] = [
     linkedinUrl: 'https://www.linkedin.com',
   },
   {
-  id: 'm5',
-  name: 'Isaac Cunha',
-  role: 'Full Stack Engineer',
-  avatar: 'Uhttps://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
-  linkedinUrl: 'https://www.linkedin.com',
+    id: 'm5',
+    name: 'Isaac Cunha',
+    role: 'Full Stack Engineer',
+    avatar: 'Uhttps://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    linkedinUrl: 'https://www.linkedin.com',
   },
 ];
 
@@ -117,7 +121,7 @@ export const catalogProducts: Product[] = [
     category: 'Vestidos',
     style: 'jovem',
     price: 219.90,
-    image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&auto=format&fit=crop&q=80',
+    image: cutoutImg,
     tag: 'Trending TikTok',
     description: 'Recortes laterais modernos e tecido com acabamento acetinado de impacto.',
   },
@@ -137,7 +141,7 @@ export const catalogProducts: Product[] = [
     category: 'Saias',
     style: 'jovem',
     price: 169.90,
-    image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=400&auto=format&fit=crop&q=80',
+    image: SaiaCargoImg,
     tag: 'Y2K Fever',
     description: 'Bolsos utilitários e tecido tecnológico leve em modelagem reta.',
   },
@@ -149,7 +153,7 @@ export const catalogProducts: Product[] = [
     category: 'Camisas & Tops',
     style: 'casual',
     price: 239.90,
-    image: 'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=400&auto=format&fit=crop&q=80',
+    image: linhoImg,
     tag: 'Fibra Natural Sustentável',
     description: 'Respirabilidade superior e visual clean para dias ensolarados.',
   },
@@ -181,7 +185,7 @@ export const catalogProducts: Product[] = [
     category: 'Streetwear',
     style: 'athleisure',
     price: 279.90,
-    image: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400&auto=format&fit=crop&q=80',
+    image: windbreakerImg,
     tag: 'Corta Vento Dry',
     description: 'Proteção contra vento e chuva leve com bolsos ocultos e capuz embutido.',
   },
@@ -214,7 +218,7 @@ export const defaultProfiles: SegmentProfile[] = [
     title: 'Perfil 01: Moda Executiva & Alfaiataria',
     personaName: 'Helena Martins',
     personaAge: 42,
-    personaBio: 'Gerente corporativa, agenda dinâmica com reuniões e viagens. Busca peças que transmitam autoridade sem abrir mão de conforto prático.',
+    personaBio: 'Representa clientes com agenda intensa de reuniões e viagens, que buscam peças que transmitam autoridade sem abrir mão do conforto prático.',
     avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&auto=format&fit=crop&q=80',
     dominantStyle: 'executivo',
     recommendedProducts: [
@@ -241,7 +245,7 @@ export const defaultProfiles: SegmentProfile[] = [
     title: 'Perfil 02: Moda Jovem & Noite',
     personaName: 'Sofia Albuquerque',
     personaAge: 20,
-    personaBio: 'Estudante universitária e criadora de conteúdo. Ama festivais, noites na cidade e experimenta tendências aceleradas do TikTok.',
+    personaBio: 'Representa clientes jovens, muito ativas nas redes sociais, que frequentam festivais e noites na cidade e adotam rápido as tendências do TikTok.',
     avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80',
     dominantStyle: 'jovem',
     recommendedProducts: [
@@ -268,7 +272,7 @@ export const defaultProfiles: SegmentProfile[] = [
     title: 'Perfil 03: Casual Chic & Básico Premium',
     personaName: 'Camila Duarte',
     personaAge: 34,
-    personaBio: 'Designer e mãe de um filho pequeno. Adora momentos ao ar livre, cafés de bairro e tecidos naturais sustentáveis que respiram.',
+    personaBio: 'Representa clientes que valorizam conforto, momentos ao ar livre e tecidos naturais sustentáveis, em looks versáteis para a rotina.',
     avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&auto=format&fit=crop&q=80',
     dominantStyle: 'casual',
     recommendedProducts: [
@@ -295,7 +299,7 @@ export const defaultProfiles: SegmentProfile[] = [
     title: 'Perfil 04: Athleisure & Streetwear',
     personaName: 'Mateus Castro',
     personaAge: 27,
-    personaBio: 'Profissional de tecnologia e praticante de corrida. Quer roupas que transitem do coworking para o treino sem perder estilo urbano.',
+    personaBio: 'Representa clientes que combinam trabalho, treino e vida urbana e querem roupas que transitem entre esses ambientes sem perder o estilo.',
     avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&auto=format&fit=crop&q=80',
     dominantStyle: 'athleisure',
     recommendedProducts: [
