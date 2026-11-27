@@ -4,33 +4,44 @@ import cutoutImg from '../../assets/produtos/cutout.jpg';
 import windbreakerImg from '../../assets/produtos/windbreaker.avif';
 import SaiaCargoImg from '../../assets/produtos/saiacargo.jpg';
 
+/* Import de foto dos membros */
+import GabSaImg from '../../assets/fotoperfil/gabrielsa.jpeg';
+import GabMImg from '../../assets/fotoperfil/gabrielm.jpg';
+import MiriaImg from '../../assets/fotoperfil/miria.jpeg';
+import JuliaImg from '../../assets/fotoperfil/julia.jpg';
+
+
+
+
+
+
 export const teamMembers: TeamMember[] = [
   {
     id: 'm1',
     name: 'Gabriel Sá Bortelli',
     role: 'Tech Lead & IA Strategy',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
+    avatar: GabSaImg,
     linkedinUrl: 'https://www.linkedin.com',
   },
   {
     id: 'm2',
     name: 'Miriã Fernanda',
     role: 'Product & Data Analyst',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatar: MiriaImg,
     linkedinUrl: 'https://www.linkedin.com',
   },
   {
     id: 'm3',
     name: 'Gabriel Mariano',
     role: 'Fashion & Marketing Specialist',
-    avatar: 'https://www.linkedin.com/in/gabrielmarianodourado/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BQpXWaNyDSLuPKPVeixTY%2Bg%3D%3D',
+    avatar: GabMImg,
     linkedinUrl: 'https://www.linkedin.com/in/gabrielmarianodourado/',
   },
   {
     id: 'm4',
     name: 'Julia Neves',
     role: 'Full Stack Engineer',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+    avatar: JuliaImg,
     linkedinUrl: 'https://www.linkedin.com',
   },
   {
